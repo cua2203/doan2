@@ -1,0 +1,94 @@
+.contact{
+    height: 485px;
+    width: 330px;
+    background-color: rgb(57, 7, 207);
+    position: fixed;
+    right: 30;
+    bottom: 30;
+    border-radius: 5px;
+    display:none;
+    z-index: 0;
+}
+
+.contact-top{
+    height: 50px;
+    border-bottom: solid 1px white;
+}
+
+#btnx{
+    height: 30;
+    width: 60;
+    position: absolute;
+    top:5;
+    right:5;
+    display: flex;
+    line-height: 28px;
+    border:solid 2px #ffffff;
+    align-items: center;
+    color: antiquewhite;
+    justify-content: space-around;
+    border-radius: 3px;
+}
+.contact-hi{
+    height: 60px;
+    background-color:white;
+    line-height: 30px;
+    margin: 0 2px;
+    font-size: 14px;
+    padding: 0 15px;
+
+}
+.contact-info{
+    background-color:white;
+    display: flex;
+    flex-direction: column;
+    margin: 0 2px;
+    height: 354;
+    border-bottom-left-radius: 3  ;
+    border-bottom-right-radius: 3;
+    padding: 0 15px;
+}
+.contact-info *{
+    margin-bottom:10;
+}
+.contact-info button{
+    height: 30px;
+    width: 120;
+    margin: 0 auto;
+}
+.contact-info input{
+    height: 25px; 
+    border-radius: 3;
+    outline:rgb(57, 7, 207);
+    border: solid 1px  rgb(57, 7, 207);
+}
+.contact-info a{
+    text-decoration: none;
+    color: blue;
+}
+#contact-pc-input:checked~.contact{
+    display: block;
+    z-index: 1;
+}
+#contact-icon{
+    display: block;
+    position: fixed;
+    right: 30;
+    bottom: 80;
+    height: 70;
+    width: 70;
+    border-radius: 35px;
+    background-color: rgb(57, 7, 207);
+    display: flex;
+
+}
+#contact-icon i{
+    margin: auto;
+    font-size: 35;
+    color: #ffffff;
+}
+
+.icon{
+    color: white;
+    font-size: 2rem;
+}

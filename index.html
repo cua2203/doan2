@@ -1,0 +1,1205 @@
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="css/F8.css" />
+        <link rel="stylesheet" type="text/css" href="css/login.css" />
+        <link rel="stylesheet" type="text/css" href="css/contact.css" />
+        <link rel="stylesheet" type="text/css" href="css/cart.css" />
+        <link rel="stylesheet" href="fontawesome-free-6.1.1-web/css/all.css"/>
+    </head>
+    <body>
+        <div id="modal" >
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Giỏ Hàng</h5>
+                    <span id="close">&times;</span>
+                </div>
+                <div class="modal-body">
+                    <div class="cart-row">
+                        <span class="cart-item cart-header cart-column">Sản Phẩm</span>
+                        <span class="cart-price cart-header cart-column">Giá</span>
+                        <span class="cart-quantity cart-header cart-column">Số Lượng</span>
+                    </div>
+                    <div class="cart-items">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <div class="cart-total">
+                        <strong class="cart-total-title">Tổng Cộng:</strong>
+                        <span class="cart-total-price">0VNĐ</span>
+                    </div>
+                    <diV>
+                        <button type="button" class="btn1 btn-secondary close-footer">Đóng</button>
+                        <button type="button" class="btn1 btn-primary order">Thanh Toán</button>
+                    </diV>
+                </div>
+            </div>
+        </div>
+        <div id="account">
+            <div id="account-content">
+                <div id="content-right-top">
+                    <div class="tablink" id="defaultOpen" onclick="openPage('tab1', this, '#ddd')">Đăng nhập</div>
+                    <div class="tablink" onclick="openPage('tab2', this, '#ddd')">Đăng ký</div>
+                    <span id="close1">&times;Thoát</span>
+                </div>
+                <div class="tabcontent" id="tab1">
+                    <div>
+                        <h2><i>WELCOME</i></h2>
+                        <input type="email" placeholder="Nhập tài khoản " required>
+                        <input type="password" placeholder="Nhập mật khẩu " required>
+                        <span>
+                            <input type="checkbox" style="width:10px;height:10px;margin-right: 5px;"><i style="font-size:12px">Remember me</i>
+                            <a href="#" style="font-size:12px;margin-left:65px"><i>Forgot password ?</i></a>
+                        </span>
+                        <br>
+                        <button>Đăng nhập</button>
+                        <br>
+                        <h>-----  or  -----</h>
+                        <br>
+                        <button><img src="images/facebook.png">Facebook</button>
+                        <button><img src="images/google.png">Google</button>                   
+                        <button><img src="images/Instagram.png">Instagram</button>                          
+                    </div>
+                </div>
+                <div class="tabcontent" id="tab2">
+                    <div>
+                        <h2><i>WELCOME</i></h2>
+                        <input type="email" placeholder="Nhập email đăng ký " required>
+                        <input type="password" placeholder="Nhập mật khẩu " required>
+                        <input type="password" placeholder="Nhập lại mật khẩu " required>
+                        <span style="margin-right:180px">
+                            <input type="checkbox" style="width:10px;height:10px;margin-right: 5px;"><i style="font-size:12px">Remember me</i>
+                        </span>
+                        <br>
+                        <button>Đăng ký</button>
+                        <br>                   
+                        <i style="font-size:12px">By creating an account you agree to our <a href=""><b>Terms & Privacy</b>.</a></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+
+        <div>
+            <input style="display:none" type="checkbox" id="contact-pc-input">
+            <div class="contact">
+                <div class="contact-top">
+                    <label for="contact-pc-input">
+                        <diV id="btnx">
+                            <i class="fa-solid fa-square-xmark"></i>Đóng
+                        </diV>
+                    </label>
+                </div>
+                <div class="contact-hi">
+                    <p><i>An Khang computer xin chào mừng quý khách đến với hỗ trợ trực tuyến ! </i></p>
+                </div>
+                <div class="contact-info">
+                    <label>Quý khách muốn xưng hô là :</label>
+                    <input type="text">
+                    <label >Tên của quý khách là :</label>
+                    <input type="text">
+                    <label>Số điện thoại của quý khách là:</label>
+                    <input type="tel">
+                    
+                    <label><input type="checkbox" name="" id="">Bằng việc chọn Bắt đầu chat, quý khách đã đồng ý với các  <a href="#">Điều khoản của Ankhangcomputer.com</a> </label>
+                    <button>Bắt đầu chat</button>
+                </div>
+            </div>
+            <label for="contact-pc-input"><div id="contact-icon"><i class="fa-solid fa-comment-dots"></i></div></label>
+        </div>  
+  
+        <header class="header" id="myHeader">
+            <div class="top-search-logo-cart grid">
+                
+                <div id="top-logo"><a href="F8.html"><img id="logo" src="images/logo_ankhang.png" /></a></div>
+                <div id="top-search">
+                    <input class="search-input" type="text" placeholder="Tìm kiếm sản phẩm..."/>
+                    <button id="search-icon"><i class="fa-solid fa-magnifying-glass"></i></button>
+                    <div id="top-search-history">
+
+
+                    </div>
+                </div>
+                <div id="cart" class="header-icon">         
+                    <span><i class="fa-solid fa-cart-shopping icon"></i></span>
+                    <span>Giỏ hàng</span>
+                </div>
+                <div id="user"  class="header-icon">
+                    <i class="fa-solid fa-right-to-bracket icon"></i>
+                    <span>Đăng nhập</span>
+                </div>
+                <div id="bars" style="display:none" sclass="header-icon">
+                    <i class="fa-solid fa-bars icon"></i>
+                    <span>Danh mục</span>
+                </div>
+              
+            </div>  
+        </header>
+        <div id="div-slideshow"style="display:flex" class="grid">      
+            <div style="width:800px;height:200px;position: relative;margin-right: 10px;" >      
+                <div id="left"><i class="fa-solid fa-angle-left" onclick="back()"></i></div> 
+                <img  id="slide" style="width:100%;height:200px;" src="images/sl1.png"/>
+                <div id="right"><i class="fa-solid fa-angle-right" onclick="next()"></i></div>
+            </div>
+            <div style="width:390px;height:200px;display:flex;flex-direction:column">
+                <img style="width:100%;height:50%" src="images/anh1.png">
+                <img style="width:100%;height:50%" src="images/anh2.png">
+            </div>
+        </div>
+        <div id="quick-link" class="grid">
+            <div>
+                <div class="company"><img src="images/logo-macbook.png" style="width:93px;height:25px"></div>
+                <div class="company"><img src="images/logo-asus.png" style="width:93px;height:25px"></div>
+                <div class="company"><img src="images/logo-hp.png" style="width:93px;height:25px"></div>
+                <div class="company"><img src="images/logo-lenovo.png" style="width:93px;height:25px"></div>
+                <div class="company"><img src="images/logo-acer.png" style="width:93px;height:25px"></div>
+                <div class="company"><img src="images/logo-dell.png" style="width:93px;height:25px"></div>
+                <div class="company"><img src="images/logo-msi.png" style="width:93px;height:25px"></div>
+                <div class="company"><img src="images/logo-surface.png" style="width:93px;height:25px"></div>
+                <div class="company"><img src="images/logo-lg.png" style="width:93px;height:25px"></div>
+                <div class="company"><img src="images/logo-gigabyte.png" style="width:93px;height:25px"></div>
+                <div class="company"><img src="images/logo-intel.png" style="width:93px;height:25px"></div>
+                <div class="company"><img src="images/logo-itel.png" style="width:93px;height:25px"></div>
+                <div class="company"><img src="images/logo-chuwi.png" style="width:93px;height:25px"></div>
+                <div class="company"><img src="images/logo-chuwi.png" style="width:93px;height:25px"></div>
+            </div>  
+        </div>
+        <div id="menu-top" class="grid">
+            <div>
+                <a href="#sale">
+                    <div class="menu-top-link"><img src="images/hot-sale.png"></div>
+                    <p>Deal Sốc</p>
+                </a>
+                <a href="#lap-gaming">
+                    <div class="menu-top-link"><i class="fa-solid fa-gamepad icon2"></i></div>
+                    <p>Gaming</p>
+                </a>
+                <a href="#macbook">
+                    <div class="menu-top-link"><i class="fa-brands fa-apple icon2"></i></div>
+                    <p>Macbook</p>
+                </a>
+                <a href="#hoctapvanphong">
+                    <div class="menu-top-link"><i class="fa-solid fa-briefcase icon2"></i></div>
+                    <p>Học tập,văn phòng</p>
+                </a>
+                <a href="#dohoakythuat">
+                    <div class="menu-top-link"><i class="fa-solid fa-pen-nib icon2"></i></div>
+                    <p>Đồ họa, kĩ thuật</p>
+                </a>
+                <a href="#mongnhe">
+                    <div class="menu-top-link"><i class="fa-solid fa-feather-pointed icon2"></i></div>
+                    <p>Mỏng nhẹ</p>
+                </a>
+                <a href="#caocap">
+                    <div class="menu-top-link"><i class="fa-solid fa-gem icon2"></i></div>
+                    <p>Cao cấp, sang trọng</p>
+                </a>
+                <a href="#phanmem">
+                    <div class="menu-top-link"><img src="images/windows-logo24.png" ></div>
+                    <p>Phần mềm</p>
+                </a>
+            </div>
+        </div>
+        
+        <div class="container">
+        
+
+            <div name="sale" id="sale" class="grid">
+                <div id="sale-top">
+                    <span>DEAL SỐC</span>
+                    <span id="GT">GIẢM TỚI 15.000.000đ</span>
+                </div >
+                <div id=sale-content>
+                    
+                </div>
+                <div id="sale-bot">
+                    <div class="more" id="more">XEM TẤT CẢ DEAL SỐC  <i class="fa-solid fa-caret-right " style="margin-left:5px"></i></div>
+                </div>
+                <div id="sale-right"><i class="fa-solid fa-angle-right icon2"></i></div>
+                <div id="sale-left"><i class="fa-solid fa-angle-left icon2"></i></div>
+            </div>
+
+            <div id="lap-gaming" class="laptop">
+                <div name="lap-gaming" class="banner grid" style="height:200px;">
+                    <img  style="height:100%;width:100%" src="images/banner1.jpg"/>
+                </div>
+                <div class="cate-product grid">
+                    <div class="product" >
+                        <div class="product-detail-info">
+                            <h>Danh dep trai</h>
+                        </div>
+                        <img class="p-img" id="p-img" src="images/product1.JPG" />
+                        <div class="p_info">
+                            <p class="name" id="name"> Acer Nitro 5 Gaming AN515 45 R6EV R5 5600H...</p>  
+                            <s class="old-price">23.990.000đ</s>-20%<br>
+                            <b class="sale-price"id="sale-price">18.990.000</b>đ<br>
+                            <div class="cauhinh" style="margin-top:10px;font-weight: 50;">
+                                <p class="cau-hinh">
+                                    <span class="c1">M.HÌNH</span>
+                                    <span>15.6", Full HD, 144Hz</span>
+                                </p>
+                                <p class="cau-hinh">
+                                    <span class="c1">CPU</span>
+                                    <span>Ryzen 5, 5600H, 3.3GHz</span>
+                                </p>
+                                <p class="cau-hinh">
+                                    <span class="c1">CARD</span>
+                                    <span>GTX 1650 4GB</span>
+                                </p>
+                                <p class="cau-hinh">
+                                    <span class="c1">PIN</span>
+                                    <span>4-cell, 57Wh</span>
+                                </p>
+                                <button type="submit" class="btn" >Mua sản phẩm</button>                             
+                            </div>    
+                        </div>
+                    </div>
+                    <div class="product">
+                        <div  class="product-detail-info">
+                            <h>Danh dep trai</h>
+                        </div>
+                        <img class="p-img" id="p-img" src="images/product2.JPG" />
+                        <div class="p_info">
+                            <p class="name"id="name"> Acer Nitro 5 Gaming </p>  
+                            <s class="old-price">23.990.000đ</s>-20%<br>
+                            <b class="sale-price"id="sale-price">18990000</b>đ<br>
+                            <div class="cauhinh" style="margin-top:10px;font-weight: 50;">
+                                <p class="cau-hinh">
+                                    <span class="c1">M.HÌNH</span>
+                                    <span>15.6", Full HD, 144Hz</span>
+                                </p>
+                                <p class="cau-hinh">
+                                    <span class="c1">CPU</span>
+                                    <span>Ryzen 5, 5600H, 3.3GHz</span>
+                                </p>
+                                <p class="cau-hinh">
+                                    <span class="c1">CARD</span>
+                                    <span>GTX 1650 4GB</span>
+                                </p>
+                                <p class="cau-hinh">
+                                    <span class="c1">PIN</span>
+                                    <span>4-cell, 57Wh</span>
+                                </p>
+                                <button type="submit" class="btn" >Mua sản phẩm</button>                             
+                            </div>    
+                        </div>
+                    </div>
+                    <div class="product ">
+                        <img class="p-img" id="p-img" src="images/product3.JPG" />
+                        <div class="p_info">
+                            <p class="name"id="name"> Acer Nitro 5 Gaming AN515 45 R6EV R5 5600H...</p>  
+                            <s class="old-price">23.990.000đ</s>-20%<br>
+                            <b class="sale-price"id="sale-price">18990000</b>đ<br>
+                            <div class="cauhinh" style="margin-top:10px;font-weight: 50;">
+                                <p class="cau-hinh">
+                                    <span class="c1">M.HÌNH</span>
+                                    <span>15.6", Full HD, 144Hz</span>
+                                </p>
+                                <p class="cau-hinh">
+                                    <span class="c1">CPU</span>
+                                    <span>Ryzen 5, 5600H, 3.3GHz</span>
+                                </p>
+                                <p class="cau-hinh">
+                                    <span class="c1">CARD</span>
+                                    <span>GTX 1650 4GB</span>
+                                </p>
+                                <p class="cau-hinh">
+                                    <span class="c1">PIN</span>
+                                    <span>4-cell, 57Wh</span>
+                                </p>
+                                <button type="submit" class="btn" >Mua sản phẩm</button>                             
+                            </div>    
+                        </div>
+                    </div>
+                    <div class="product ">
+                        <img class="p-img" id="p-img" src="images/lap-gaming1.JPG" />
+                        <div class="p_info">
+                            <p class="name"id="name"> Acer Nitro 5 Gaming AN515 45 R6EV R5 5600H...</p>  
+                            <s class="old-price">23.990.000đ</s>-20%<br>
+                            <b class="sale-price"id="sale-price">18990000</b>đ<br>
+                            <div class="cauhinh" style="margin-top:10px;font-weight: 50;">
+                                <p class="cau-hinh">
+                                    <span class="c1">M.HÌNH</span>
+                                    <span>15.6", Full HD, 144Hz</span>
+                                </p>
+                                <p class="cau-hinh">
+                                    <span class="c1">CPU</span>
+                                    <span>Ryzen 5, 5600H, 3.3GHz</span>
+                                </p>
+                                <p class="cau-hinh">
+                                    <span class="c1">CARD</span>
+                                    <span>GTX 1650 4GB</span>
+                                </p>
+                                <p class="cau-hinh">
+                                    <span class="c1">PIN</span>
+                                    <span>4-cell, 57Wh</span>
+                                </p>
+                                <button type="submit" class="btn" >Mua sản phẩm</button>                             
+                            </div>    
+                        </div>
+                    </div>
+                    <div class="product last-product">
+                        <img class="p-img" id="p-img" src="images/lap-gaming2.JPG" />
+                        <div class="p_info">
+                            <p class="name"id="name"> Acer Nitro 5 Gaming AN515 45 R6EV R5 5600H...</p>  
+                            <s class="old-price">23.990.000đ</s>-20%<br>
+                            <b class="sale-price"id="sale-price">18990000</b>đ<br>
+                            <div class="cauhinh" style="margin-top:10px;font-weight: 50;">
+                                <p class="cau-hinh">
+                                    <span class="c1">M.HÌNH</span>
+                                    <span>15.6", Full HD, 144Hz</span>
+                                </p>
+                                <p class="cau-hinh">
+                                    <span class="c1">CPU</span>
+                                    <span>Ryzen 5, 5600H, 3.3GHz</span>
+                                </p>
+                                <p class="cau-hinh">
+                                    <span class="c1">CARD</span>
+                                    <span>GTX 1650 4GB</span>
+                                </p>
+                                <p class="cau-hinh">
+                                    <span class="c1">PIN</span>
+                                    <span>4-cell, 57Wh</span>
+                                </p>
+                                <button type="submit" class="btn" >Mua sản phẩm</button>                             
+                            </div>    
+                        </div>
+                    </div>
+          
+                </div>
+                <div class="more">XEM TẤT CẢ LAPTOP GAMING  <i class="fa-solid fa-caret-right " style="margin-left:5px"></i></div>
+            </div>
+            <div id="macbook" class="laptop">
+                <div name="macbook" class="banner grid" style="height:200px;">
+                    <img  style="height:100%;width:100%" src="images/bannermacbook.jpg"/>
+                </div>
+                <div class="cate-product grid">
+                    <div class="product ">
+                        <img class="p-img" id="p-img" src="images/mac1.JPG" />
+                        <div class="p_info">
+                            <p class="name" id="name"> Acer Nitro 5 Gaming AN515 45 R6EV R5 5600H...</p>  
+                            <s class="old-price">23.990.000đ</s>-20%<br>
+                            <b class="sale-price"id="sale-price">18.990.000</b>đ<br>
+                            <div class="cauhinh" style="margin-top:10px;font-weight: 50;">
+                                <p class="cau-hinh">
+                                    <span class="c1">M.HÌNH</span>
+                                    <span>15.6", Full HD, 144Hz</span>
+                                </p>
+                                <p class="cau-hinh">
+                                    <span class="c1">CPU</span>
+                                    <span>Ryzen 5, 5600H, 3.3GHz</span>
+                                </p>
+                                <p class="cau-hinh">
+                                    <span class="c1">CARD</span>
+                                    <span>GTX 1650 4GB</span>
+                                </p>
+                                <p class="cau-hinh">
+                                    <span class="c1">PIN</span>
+                                    <span>4-cell, 57Wh</span>
+                                </p>
+                                <button type="submit" class="btn" >Mua sản phẩm</button>                             
+                            </div>    
+                        </div>
+                    </div>
+                    <div class="product ">
+                        <img class="p-img" id="p-img" src="images/mac2.JPG" />
+                        <div class="p_info">
+                            <p class="name"id="name"> Acer Nitro 5 Gaming </p>  
+                            <s class="old-price">23.990.000đ</s>-20%<br>
+                            <b class="sale-price"id="sale-price">18990000</b>đ<br>
+                            <div class="cauhinh" style="margin-top:10px;font-weight: 50;">
+                                <p class="cau-hinh">
+                                    <span class="c1">M.HÌNH</span>
+                                    <span>15.6", Full HD, 144Hz</span>
+                                </p>
+                                <p class="cau-hinh">
+                                    <span class="c1">CPU</span>
+                                    <span>Ryzen 5, 5600H, 3.3GHz</span>
+                                </p>
+                                <p class="cau-hinh">
+                                    <span class="c1">CARD</span>
+                                    <span>GTX 1650 4GB</span>
+                                </p>
+                                <p class="cau-hinh">
+                                    <span class="c1">PIN</span>
+                                    <span>4-cell, 57Wh</span>
+                                </p>
+                                <button type="submit" class="btn" >Mua sản phẩm</button>                             
+                            </div>    
+                        </div>
+                    </div>
+                    <div class="product ">
+                        <img class="p-img" id="p-img" src="images/mac3.JPG" />
+                        <div class="p_info">
+                            <p class="name"id="name"> Acer Nitro 5 Gaming AN515 45 R6EV R5 5600H...</p>  
+                            <s class="old-price">23.990.000đ</s>-20%<br>
+                            <b class="sale-price"id="sale-price">18990000</b>đ<br>
+                            <div class="cauhinh" style="margin-top:10px;font-weight: 50;">
+                                <p class="cau-hinh">
+                                    <span class="c1">M.HÌNH</span>
+                                    <span>15.6", Full HD, 144Hz</span>
+                                </p>
+                                <p class="cau-hinh">
+                                    <span class="c1">CPU</span>
+                                    <span>Ryzen 5, 5600H, 3.3GHz</span>
+                                </p>
+                                <p class="cau-hinh">
+                                    <span class="c1">CARD</span>
+                                    <span>GTX 1650 4GB</span>
+                                </p>
+                                <p class="cau-hinh">
+                                    <span class="c1">PIN</span>
+                                    <span>4-cell, 57Wh</span>
+                                </p>
+                                <button type="submit" class="btn" >Mua sản phẩm</button>                             
+                            </div>    
+                        </div>
+                    </div>
+                    <div class="product ">
+                        <img class="p-img" id="p-img" src="images/mac4.JPG" />
+                        <div class="p_info">
+                            <p class="name"id="name"> Acer Nitro 5 Gaming AN515 45 R6EV R5 5600H...</p>  
+                            <s class="old-price">23.990.000đ</s>-20%<br>
+                            <b class="sale-price"id="sale-price">18990000</b>đ<br>
+                            <div class="cauhinh" style="margin-top:10px;font-weight: 50;">
+                                <p class="cau-hinh">
+                                    <span class="c1">M.HÌNH</span>
+                                    <span>15.6", Full HD, 144Hz</span>
+                                </p>
+                                <p class="cau-hinh">
+                                    <span class="c1">CPU</span>
+                                    <span>Ryzen 5, 5600H, 3.3GHz</span>
+                                </p>
+                                <p class="cau-hinh">
+                                    <span class="c1">CARD</span>
+                                    <span>GTX 1650 4GB</span>
+                                </p>
+                                <p class="cau-hinh">
+                                    <span class="c1">PIN</span>
+                                    <span>4-cell, 57Wh</span>
+                                </p>
+                                <button type="submit" class="btn" >Mua sản phẩm</button>                             
+                            </div>    
+                        </div>
+                    </div>
+                    <div class="product last-product">
+                        <img class="p-img" id="p-img" src="images/mac5.JPG" />
+                        <div class="p_info">
+                            <p class="name"id="name"> Acer Nitro 5 Gaming AN515 45 R6EV R5 5600H...</p>  
+                            <s class="old-price">23.990.000đ</s>-20%<br>
+                            <b class="sale-price"id="sale-price">18990000</b>đ<br>
+                            <div class="cauhinh" style="margin-top:10px;font-weight: 50;">
+                                <p class="cau-hinh">
+                                    <span class="c1">M.HÌNH</span>
+                                    <span>15.6", Full HD, 144Hz</span>
+                                </p>
+                                <p class="cau-hinh">
+                                    <span class="c1">CPU</span>
+                                    <span>Ryzen 5, 5600H, 3.3GHz</span>
+                                </p>
+                                <p class="cau-hinh">
+                                    <span class="c1">CARD</span>
+                                    <span>GTX 1650 4GB</span>
+                                </p>
+                                <p class="cau-hinh">
+                                    <span class="c1">PIN</span>
+                                    <span>4-cell, 57Wh</span>
+                                </p>
+                                <button type="submit" class="btn" >Mua sản phẩm</button>                             
+                            </div>    
+                        </div>
+                    </div>
+          
+                </div>
+                <div class="more">XEM TẤT CẢ MACBOOK  <i class="fa-solid fa-caret-right " style="margin-left:5px"></i></div>
+            </div>
+            <div id="hoctapvanphong" class="laptop">
+                <div name="hoctapvanphong"class="banner grid" style="height:200px;">
+                    <img  style="height:100%;width:100%" src="images/hoctapvanphong.jpg"/>
+                </div>
+                <div class="cate-product grid">
+                    <div class="product ">
+                        <img class="p-img" id="p-img" src="images/vp1.JPG" />
+                        <div class="p_info">
+                            <p class="name" id="name"> Acer Nitro 5 Gaming AN515 45 R6EV R5 5600H...</p>  
+                            <s class="old-price">23.990.000đ</s>-20%<br>
+                            <b class="sale-price"id="sale-price">18.990.000</b>đ<br>
+                            <div class="cauhinh" style="margin-top:10px;font-weight: 50;">
+                                <p class="cau-hinh">
+                                    <span class="c1">M.HÌNH</span>
+                                    <span>15.6", Full HD, 144Hz</span>
+                                </p>
+                                <p class="cau-hinh">
+                                    <span class="c1">CPU</span>
+                                    <span>Ryzen 5, 5600H, 3.3GHz</span>
+                                </p>
+                                <p class="cau-hinh">
+                                    <span class="c1">CARD</span>
+                                    <span>GTX 1650 4GB</span>
+                                </p>
+                                <p class="cau-hinh">
+                                    <span class="c1">PIN</span>
+                                    <span>4-cell, 57Wh</span>
+                                </p>
+                                <button type="submit" class="btn" >Mua sản phẩm</button>                             
+                            </div>    
+                        </div>
+                    </div>
+                    <div class="product ">
+                        <img class="p-img" id="p-img" src="images/vp2.JPG" />
+                        <div class="p_info">
+                            <p class="name"id="name"> Acer Nitro 5 Gaming </p>  
+                            <s class="old-price">23.990.000đ</s>-20%<br>
+                            <b class="sale-price"id="sale-price">18990000</b>đ<br>
+                            <div class="cauhinh" style="margin-top:10px;font-weight: 50;">
+                                <p class="cau-hinh">
+                                    <span class="c1">M.HÌNH</span>
+                                    <span>15.6", Full HD, 144Hz</span>
+                                </p>
+                                <p class="cau-hinh">
+                                    <span class="c1">CPU</span>
+                                    <span>Ryzen 5, 5600H, 3.3GHz</span>
+                                </p>
+                                <p class="cau-hinh">
+                                    <span class="c1">CARD</span>
+                                    <span>GTX 1650 4GB</span>
+                                </p>
+                                <p class="cau-hinh">
+                                    <span class="c1">PIN</span>
+                                    <span>4-cell, 57Wh</span>
+                                </p>
+                                <button type="submit" class="btn" >Mua sản phẩm</button>                             
+                            </div>    
+                        </div>
+                    </div>
+                    <div class="product ">
+                        <img class="p-img" id="p-img" src="images/vp3.JPG" />
+                        <div class="p_info">
+                            <p class="name"id="name"> Acer Nitro 5 Gaming AN515 45 R6EV R5 5600H...</p>  
+                            <s class="old-price">23.990.000đ</s>-20%<br>
+                            <b class="sale-price"id="sale-price">18990000</b>đ<br>
+                            <div class="cauhinh" style="margin-top:10px;font-weight: 50;">
+                                <p class="cau-hinh">
+                                    <span class="c1">M.HÌNH</span>
+                                    <span>15.6", Full HD, 144Hz</span>
+                                </p>
+                                <p class="cau-hinh">
+                                    <span class="c1">CPU</span>
+                                    <span>Ryzen 5, 5600H, 3.3GHz</span>
+                                </p>
+                                <p class="cau-hinh">
+                                    <span class="c1">CARD</span>
+                                    <span>GTX 1650 4GB</span>
+                                </p>
+                                <p class="cau-hinh">
+                                    <span class="c1">PIN</span>
+                                    <span>4-cell, 57Wh</span>
+                                </p>
+                                <button type="submit" class="btn" >Mua sản phẩm</button>                             
+                            </div>    
+                        </div>
+                    </div>
+                    <div class="product ">
+                        <img class="p-img" id="p-img" src="images/vp4.JPG" />
+                        <div class="p_info">
+                            <p class="name"id="name"> Acer Nitro 5 Gaming AN515 45 R6EV R5 5600H...</p>  
+                            <s class="old-price">23.990.000đ</s>-20%<br>
+                            <b class="sale-price"id="sale-price">18990000</b>đ<br>
+                            <div class="cauhinh" style="margin-top:10px;font-weight: 50;">
+                                <p class="cau-hinh">
+                                    <span class="c1">M.HÌNH</span>
+                                    <span>15.6", Full HD, 144Hz</span>
+                                </p>
+                                <p class="cau-hinh">
+                                    <span class="c1">CPU</span>
+                                    <span>Ryzen 5, 5600H, 3.3GHz</span>
+                                </p>
+                                <p class="cau-hinh">
+                                    <span class="c1">CARD</span>
+                                    <span>GTX 1650 4GB</span>
+                                </p>
+                                <p class="cau-hinh">
+                                    <span class="c1">PIN</span>
+                                    <span>4-cell, 57Wh</span>
+                                </p>
+                                <button type="submit" class="btn" >Mua sản phẩm</button>                             
+                            </div>    
+                        </div>
+                    </div>
+                    <div class="product last-product">
+                        <img class="p-img" id="p-img" src="images/vp5.JPG" />
+                        <div class="p_info">
+                            <p class="name"id="name"> Acer Nitro 5 Gaming AN515 45 R6EV R5 5600H...</p>  
+                            <s class="old-price">23.990.000đ</s>-20%<br>
+                            <b class="sale-price"id="sale-price">18990000</b>đ<br>
+                            <div class="cauhinh" style="margin-top:10px;font-weight: 50;">
+                                <p class="cau-hinh">
+                                    <span class="c1">M.HÌNH</span>
+                                    <span>15.6", Full HD, 144Hz</span>
+                                </p>
+                                <p class="cau-hinh">
+                                    <span class="c1">CPU</span>
+                                    <span>Ryzen 5, 5600H, 3.3GHz</span>
+                                </p>
+                                <p class="cau-hinh">
+                                    <span class="c1">CARD</span>
+                                    <span>GTX 1650 4GB</span>
+                                </p>
+                                <p class="cau-hinh">
+                                    <span class="c1">PIN</span>
+                                    <span>4-cell, 57Wh</span>
+                                </p>
+                                <button type="submit" class="btn" >Mua sản phẩm</button>                             
+                            </div>    
+                        </div>
+                    </div>
+          
+                </div>
+                <div class="more">XEM TẤT CẢ LAPTOP HỌC TẬP, VĂN PHÒNG <i class="fa-solid fa-caret-right " style="margin-left:5px"></i></div>
+            </div>
+            <div id="dohoakythuat" class="laptop">
+                <div name="dohoakythuat" class="banner grid" style="height:200px;">
+                    <img  style="height:100%;width:100%" src="images/dohoa.jpg"/>
+                </div>
+                <div class="cate-product grid">
+                    <div class="product ">
+                        <img class="p-img" id="p-img" src="images/kt1.JPG" />
+                        <div class="p_info">
+                            <p class="name" id="name"> Acer Nitro 5 Gaming AN515 45 R6EV R5 5600H...</p>  
+                            <s class="old-price">23.990.000đ</s>-20%<br>
+                            <b class="sale-price"id="sale-price">18.990.000</b>đ<br>
+                            <div class="cauhinh" style="margin-top:10px;font-weight: 50;">
+                                <p class="cau-hinh">
+                                    <span class="c1">M.HÌNH</span>
+                                    <span>15.6", Full HD, 144Hz</span>
+                                </p>
+                                <p class="cau-hinh">
+                                    <span class="c1">CPU</span>
+                                    <span>Ryzen 5, 5600H, 3.3GHz</span>
+                                </p>
+                                <p class="cau-hinh">
+                                    <span class="c1">CARD</span>
+                                    <span>GTX 1650 4GB</span>
+                                </p>
+                                <p class="cau-hinh">
+                                    <span class="c1">PIN</span>
+                                    <span>4-cell, 57Wh</span>
+                                </p>
+                                <button type="submit" class="btn" >Mua sản phẩm</button>                             
+                            </div>    
+                        </div>
+                    </div>
+                    <div class="product ">
+                        <img class="p-img" id="p-img" src="images/kt2.JPG" />
+                        <div class="p_info">
+                            <p class="name"id="name"> Acer Nitro 5 Gaming </p>  
+                            <s class="old-price">23.990.000đ</s>-20%<br>
+                            <b class="sale-price"id="sale-price">18990000</b>đ<br>
+                            <div class="cauhinh" style="margin-top:10px;font-weight: 50;">
+                                <p class="cau-hinh">
+                                    <span class="c1">M.HÌNH</span>
+                                    <span>15.6", Full HD, 144Hz</span>
+                                </p>
+                                <p class="cau-hinh">
+                                    <span class="c1">CPU</span>
+                                    <span>Ryzen 5, 5600H, 3.3GHz</span>
+                                </p>
+                                <p class="cau-hinh">
+                                    <span class="c1">CARD</span>
+                                    <span>GTX 1650 4GB</span>
+                                </p>
+                                <p class="cau-hinh">
+                                    <span class="c1">PIN</span>
+                                    <span>4-cell, 57Wh</span>
+                                </p>
+                                <button type="submit" class="btn" >Mua sản phẩm</button>                             
+                            </div>    
+                        </div>
+                    </div>
+                    <div class="product ">
+                        <img class="p-img" id="p-img" src="images/kt3.JPG" />
+                        <div class="p_info">
+                            <p id="name"> Acer Nitro 5 Gaming AN515 45 R6EV R5 5600H...</p>  
+                            <s class="old-price">23.990.000đ</s>-20%<br>
+                            <b class="sale-price"id="sale-price">18990000</b>đ<br>
+                            <div class="cauhinh" style="margin-top:10px;font-weight: 50;">
+                                <p class="cau-hinh">
+                                    <span class="c1">M.HÌNH</span>
+                                    <span>15.6", Full HD, 144Hz</span>
+                                </p>
+                                <p class="cau-hinh">
+                                    <span class="c1">CPU</span>
+                                    <span>Ryzen 5, 5600H, 3.3GHz</span>
+                                </p>
+                                <p class="cau-hinh">
+                                    <span class="c1">CARD</span>
+                                    <span>GTX 1650 4GB</span>
+                                </p>
+                                <p class="cau-hinh">
+                                    <span class="c1">PIN</span>
+                                    <span>4-cell, 57Wh</span>
+                                </p>
+                                <button type="submit" class="btn" >Mua sản phẩm</button>                             
+                            </div>    
+                        </div>
+                    </div>
+                    <div class="product ">
+                        <img class="p-img" id="p-img" src="images/kt4.JPG" />
+                        <div class="p_info">
+                            <p id="name"> Acer Nitro 5 Gaming AN515 45 R6EV R5 5600H...</p>  
+                            <s class="old-price">23.990.000đ</s>-20%<br>
+                            <b class="sale-price"id="sale-price">18990000</b>đ<br>
+                            <div class="cauhinh" style="margin-top:10px;font-weight: 50;">
+                                <p class="cau-hinh">
+                                    <span class="c1">M.HÌNH</span>
+                                    <span>15.6", Full HD, 144Hz</span>
+                                </p>
+                                <p class="cau-hinh">
+                                    <span class="c1">CPU</span>
+                                    <span>Ryzen 5, 5600H, 3.3GHz</span>
+                                </p>
+                                <p class="cau-hinh">
+                                    <span class="c1">CARD</span>
+                                    <span>GTX 1650 4GB</span>
+                                </p>
+                                <p class="cau-hinh">
+                                    <span class="c1">PIN</span>
+                                    <span>4-cell, 57Wh</span>
+                                </p>
+                                <button type="submit" class="btn" >Mua sản phẩm</button>                             
+                            </div>    
+                        </div>
+                    </div>
+                    <div class="product last-product">
+                        <img class="p-img" id="p-img" src="images/kt5.JPG" />
+                        <div class="p_info">
+                            <p id="name"> Acer Nitro 5 Gaming AN515 45 R6EV R5 5600H...</p>  
+                            <s class="old-price">23.990.000đ</s>-20%<br>
+                            <b class="sale-price"id="sale-price">18990000</b>đ<br>
+                            <div class="cauhinh" style="margin-top:10px;font-weight: 50;">
+                                <p class="cau-hinh">
+                                    <span class="c1">M.HÌNH</span>
+                                    <span>15.6", Full HD, 144Hz</span>
+                                </p>
+                                <p class="cau-hinh">
+                                    <span class="c1">CPU</span>
+                                    <span>Ryzen 5, 5600H, 3.3GHz</span>
+                                </p>
+                                <p class="cau-hinh">
+                                    <span class="c1">CARD</span>
+                                    <span>GTX 1650 4GB</span>
+                                </p>
+                                <p class="cau-hinh">
+                                    <span class="c1">PIN</span>
+                                    <span>4-cell, 57Wh</span>
+                                </p>
+                                <button type="submit" class="btn" >Mua sản phẩm</button>                             
+                            </div>    
+                        </div>
+                    </div>
+          
+                </div>
+                <div class="more">XEM TẤT CẢ LAPTOP ĐỒ HỌA , KỸ THUẬT <i class="fa-solid fa-caret-right " style="margin-left:5px"></i></div>
+            </div>
+
+            <div id="mongnhe" class="laptop">
+                <div name="mongnhe"class="banner grid" style="height:200px;">
+                    <img  style="height:100%;width:100%" src="images/mongnhedes.jpg"/>
+                </div>
+                <div class="cate-product grid">
+                    <div class="product ">
+                        <img class="p-img" id="p-img" src="images/mn1.JPG" />
+                        <div class="p_info">
+                            <p class="name" id="name"> Acer Nitro 5 Gaming AN515 45 R6EV R5 5600H...</p>  
+                            <s class="old-price">23.990.000đ</s>-20%<br>
+                            <b class="sale-price"id="sale-price">18.990.000</b>đ<br>
+                            <div class="cauhinh" style="margin-top:10px;font-weight: 50;">
+                                <p class="cau-hinh">
+                                    <span class="c1">M.HÌNH</span>
+                                    <span>15.6", Full HD, 144Hz</span>
+                                </p>
+                                <p class="cau-hinh">
+                                    <span class="c1">CPU</span>
+                                    <span>Ryzen 5, 5600H, 3.3GHz</span>
+                                </p>
+                                <p class="cau-hinh">
+                                    <span class="c1">CARD</span>
+                                    <span>GTX 1650 4GB</span>
+                                </p>
+                                <p class="cau-hinh">
+                                    <span class="c1">PIN</span>
+                                    <span>4-cell, 57Wh</span>
+                                </p>
+                                <button type="submit" class="btn" >Mua sản phẩm</button>                             
+                            </div>    
+                        </div>
+                    </div>
+                    <div class="product ">
+                        <img class="p-img" id="p-img" src="images/mn2.JPG" />
+                        <div class="p_info">
+                            <p class="name"id="name"> Acer Nitro 5 Gaming </p>  
+                            <s class="old-price">23.990.000đ</s>-20%<br>
+                            <b class="sale-price"id="sale-price">18990000</b>đ<br>
+                            <div class="cauhinh" style="margin-top:10px;font-weight: 50;">
+                                <p class="cau-hinh">
+                                    <span class="c1">M.HÌNH</span>
+                                    <span>15.6", Full HD, 144Hz</span>
+                                </p>
+                                <p class="cau-hinh">
+                                    <span class="c1">CPU</span>
+                                    <span>Ryzen 5, 5600H, 3.3GHz</span>
+                                </p>
+                                <p class="cau-hinh">
+                                    <span class="c1">CARD</span>
+                                    <span>GTX 1650 4GB</span>
+                                </p>
+                                <p class="cau-hinh">
+                                    <span class="c1">PIN</span>
+                                    <span>4-cell, 57Wh</span>
+                                </p>
+                                <button type="submit" class="btn" >Mua sản phẩm</button>                             
+                            </div>    
+                        </div>
+                    </div>
+                    <div class="product ">
+                        <img class="p-img" id="p-img" src="images/mn3.JPG" />
+                        <div class="p_info">
+                            <p class="name"id="name"> Acer Nitro 5 Gaming AN515 45 R6EV R5 5600H...</p>  
+                            <s class="old-price">23.990.000đ</s>-20%<br>
+                            <b class="sale-price"id="sale-price">18990000</b>đ<br>
+                            <div class="cauhinh" style="margin-top:10px;font-weight: 50;">
+                                <p class="cau-hinh">
+                                    <span class="c1">M.HÌNH</span>
+                                    <span>15.6", Full HD, 144Hz</span>
+                                </p>
+                                <p class="cau-hinh">
+                                    <span class="c1">CPU</span>
+                                    <span>Ryzen 5, 5600H, 3.3GHz</span>
+                                </p>
+                                <p class="cau-hinh">
+                                    <span class="c1">CARD</span>
+                                    <span>GTX 1650 4GB</span>
+                                </p>
+                                <p class="cau-hinh">
+                                    <span class="c1">PIN</span>
+                                    <span>4-cell, 57Wh</span>
+                                </p>
+                                <button type="submit" class="btn" >Mua sản phẩm</button>                             
+                            </div>    
+                        </div>
+                    </div>
+                    <div class="product ">
+                        <img class="p-img" id="p-img" src="images/mn5.JPG" />
+                        <div class="p_info">
+                            <p class="name"id="name"> Acer Nitro 5 Gaming AN515 45 R6EV R5 5600H...</p>  
+                            <s class="old-price">23.990.000đ</s>-20%<br>
+                            <b class="sale-price"id="sale-price">18990000</b>đ<br>
+                            <div class="cauhinh" style="margin-top:10px;font-weight: 50;">
+                                <p class="cau-hinh">
+                                    <span class="c1">M.HÌNH</span>
+                                    <span>15.6", Full HD, 144Hz</span>
+                                </p>
+                                <p class="cau-hinh">
+                                    <span class="c1">CPU</span>
+                                    <span>Ryzen 5, 5600H, 3.3GHz</span>
+                                </p>
+                                <p class="cau-hinh">
+                                    <span class="c1">CARD</span>
+                                    <span>GTX 1650 4GB</span>
+                                </p>
+                                <p class="cau-hinh">
+                                    <span class="c1">PIN</span>
+                                    <span>4-cell, 57Wh</span>
+                                </p>
+                                <button type="submit" class="btn" >Mua sản phẩm</button>                             
+                            </div>    
+                        </div>
+                    </div>
+                    <div class="product last-product">
+                        <img class="p-img" id="p-img" src="images/mn4.JPG" />
+                        <div class="p_info">
+                            <p class="name"id="name"> Acer Nitro 5 Gaming AN515 45 R6EV R5 5600H...</p>  
+                            <s class="old-price">23.990.000đ</s>-20%<br>
+                            <b class="sale-price"id="sale-price">18990000</b>đ<br>
+                            <div class="cauhinh" style="margin-top:10px;font-weight: 50;">
+                                <p class="cau-hinh">
+                                    <span class="c1">M.HÌNH</span>
+                                    <span>15.6", Full HD, 144Hz</span>
+                                </p>
+                                <p class="cau-hinh">
+                                    <span class="c1">CPU</span>
+                                    <span>Ryzen 5, 5600H, 3.3GHz</span>
+                                </p>
+                                <p class="cau-hinh">
+                                    <span class="c1">CARD</span>
+                                    <span>GTX 1650 4GB</span>
+                                </p>
+                                <p class="cau-hinh">
+                                    <span class="c1">PIN</span>
+                                    <span>4-cell, 57Wh</span>
+                                </p>
+                                <button type="submit" class="btn" >Mua sản phẩm</button>                             
+                            </div>    
+                        </div>
+                    </div>
+          
+                </div>
+                <div class="more">XEM TẤT CẢ LAPTOP MỎNG NHẸ <i class="fa-solid fa-caret-right " style="margin-left:5px"></i></div>
+            </div>
+
+            <div id="caocap" class="laptop">
+                <div name="caocap" class="banner grid" style="height:200px;">
+                    <img  style="height:100%;width:100%" src="images/caocap.jpg"/>
+                </div>
+                <div class="cate-product grid">
+                    <div class="product ">
+                        <img class="p-img" id="p-img" src="images/cc1.JPG" />
+                        <div class="p_info">
+                            <p class="name" id="name"> Acer Nitro 5 Gaming AN515 45 R6EV R5 5600H...</p>  
+                            <s class="old-price">23.990.000đ</s>-20%<br>
+                            <b class="sale-price"id="sale-price">18.990.000</b>đ<br>
+                            <div class="cauhinh" style="margin-top:10px;font-weight: 50;">
+                                <p class="cau-hinh">
+                                    <span class="c1">M.HÌNH</span>
+                                    <span>15.6", Full HD, 144Hz</span>
+                                </p>
+                                <p class="cau-hinh">
+                                    <span class="c1">CPU</span>
+                                    <span>Ryzen 5, 5600H, 3.3GHz</span>
+                                </p>
+                                <p class="cau-hinh">
+                                    <span class="c1">CARD</span>
+                                    <span>GTX 1650 4GB</span>
+                                </p>
+                                <p class="cau-hinh">
+                                    <span class="c1">PIN</span>
+                                    <span>4-cell, 57Wh</span>
+                                </p>
+                                <button type="submit" class="btn" >Mua sản phẩm</button>                             
+                            </div>    
+                        </div>
+                    </div>
+                    <div class="product ">
+                        <img class="p-img" id="p-img" src="images/cc2.JPG" />
+                        <div class="p_info">
+                            <p class="name"id="name"> Acer Nitro 5 Gaming </p>  
+                            <s class="old-price">23.990.000đ</s>-20%<br>
+                            <b class="sale-price"id="sale-price">18990000</b>đ<br>
+                            <div class="cauhinh" style="margin-top:10px;font-weight: 50;">
+                                <p class="cau-hinh">
+                                    <span class="c1">M.HÌNH</span>
+                                    <span>15.6", Full HD, 144Hz</span>
+                                </p>
+                                <p class="cau-hinh">
+                                    <span class="c1">CPU</span>
+                                    <span>Ryzen 5, 5600H, 3.3GHz</span>
+                                </p>
+                                <p class="cau-hinh">
+                                    <span class="c1">CARD</span>
+                                    <span>GTX 1650 4GB</span>
+                                </p>
+                                <p class="cau-hinh">
+                                    <span class="c1">PIN</span>
+                                    <span>4-cell, 57Wh</span>
+                                </p>
+                                <button type="submit" class="btn" >Mua sản phẩm</button>                             
+                            </div>    
+                        </div>
+                    </div>
+                    <div class="product ">
+                        <img class="p-img" id="p-img" src="images/cc3.JPG" />
+                        <div class="p_info">
+                            <p class="name"id="name"> Acer Nitro 5 Gaming AN515 45 R6EV R5 5600H...</p>  
+                            <s class="old-price">23.990.000đ</s>-20%<br>
+                            <b class="sale-price"id="sale-price">18990000</b>đ<br>
+                            <div class="cauhinh" style="margin-top:10px;font-weight: 50;">
+                                <p class="cau-hinh">
+                                    <span class="c1">M.HÌNH</span>
+                                    <span>15.6", Full HD, 144Hz</span>
+                                </p>
+                                <p class="cau-hinh">
+                                    <span class="c1">CPU</span>
+                                    <span>Ryzen 5, 5600H, 3.3GHz</span>
+                                </p>
+                                <p class="cau-hinh">
+                                    <span class="c1">CARD</span>
+                                    <span>GTX 1650 4GB</span>
+                                </p>
+                                <p class="cau-hinh">
+                                    <span class="c1">PIN</span>
+                                    <span>4-cell, 57Wh</span>
+                                </p>
+                                <button type="submit" class="btn" >Mua sản phẩm</button>                             
+                            </div>    
+                        </div>
+                    </div>
+                    <div class="product ">
+                        <img class="p-img" id="p-img" src="images/cc4.JPG" />
+                        <div class="p_info">
+                            <p class="name"id="name"> Acer Nitro 5 Gaming AN515 45 R6EV R5 5600H...</p>  
+                            <s class="old-price">23.990.000đ</s>-20%<br>
+                            <b class="sale-price"id="sale-price">18990000</b>đ<br>
+                            <div class="cauhinh" style="margin-top:10px;font-weight: 50;">
+                                <p class="cau-hinh">
+                                    <span class="c1">M.HÌNH</span>
+                                    <span>15.6", Full HD, 144Hz</span>
+                                </p>
+                                <p class="cau-hinh">
+                                    <span class="c1">CPU</span>
+                                    <span>Ryzen 5, 5600H, 3.3GHz</span>
+                                </p>
+                                <p class="cau-hinh">
+                                    <span class="c1">CARD</span>
+                                    <span>GTX 1650 4GB</span>
+                                </p>
+                                <p class="cau-hinh">
+                                    <span class="c1">PIN</span>
+                                    <span>4-cell, 57Wh</span>
+                                </p>
+                                <button type="submit" class="btn" >Mua sản phẩm</button>                             
+                            </div>    
+                        </div>
+                    </div>
+                    <div class="product last-product">
+                        <img class="p-img" id="p-img" src="images/cc5.JPG" />
+                        <div class="p_info">
+                            <p class="name"id="name"> Acer Nitro 5 Gaming AN515 45 R6EV R5 5600H...</p>  
+                            <s class="old-price">23.990.000đ</s>-20%<br>
+                            <b class="sale-price"id="sale-price">18990000</b>đ<br>
+                            <div class="cauhinh" style="margin-top:10px;font-weight: 50;">
+                                <p class="cau-hinh">
+                                    <span class="c1">M.HÌNH</span>
+                                    <span>15.6", Full HD, 144Hz</span>
+                                </p>
+                                <p class="cau-hinh">
+                                    <span class="c1">CPU</span>
+                                    <span>Ryzen 5, 5600H, 3.3GHz</span>
+                                </p>
+                                <p class="cau-hinh">
+                                    <span class="c1">CARD</span>
+                                    <span>GTX 1650 4GB</span>
+                                </p>
+                                <p class="cau-hinh">
+                                    <span class="c1">PIN</span>
+                                    <span>4-cell, 57Wh</span>
+                                </p>
+                                <button type="submit" class="btn" >Mua sản phẩm</button>                             
+                            </div>    
+                        </div>
+                    </div>
+          
+                </div>
+                <div class="more">XEM TẤT CẢ LAPTOP CAO CẤP <i class="fa-solid fa-caret-right " style="margin-left:5px"></i></div>
+            </div>
+            <div id="phanmem" class="laptop">
+                <div name="phanmem" class="banner grid" style="height:200px;">
+                    <img  style="height:100%;width:100%" src="images/phanmem.png"/>
+                </div>
+                <div class="cate-product grid">
+                    <div class="product ">
+                        <img class="pm-img" src="images/pm1.JPG" />
+                        <div class="p_info">
+                            <p class="name" id="name">Microsoft 365 Personal 32/64bit 1 năm 1 user Win/Mac</p>  
+                            <b class="sale-price"id="sale-price">990.000</b>đ<br>
+                            <div class="cauhinh" style="margin-top:10px;font-weight: 50;">
+                                <button type="submit" class="btn" >Mua sản phẩm</button>                             
+                            </div>    
+                        </div>
+                    </div>
+                    <div class="product ">
+                        <img class="pm-img"  src="images/pm2.JPG" />
+                        <div class="p_info">
+                            <p class="name"id="name">  Microsoft 365 Family 32/64bit 1 năm 6 user Win/Mac </p>  
+                            <b class="sale-price"id="sale-price">1.490.000</b>đ<br>
+                            <div class="cauhinh" style="margin-top:10px;font-weight: 50;">
+                                <button type="submit" class="btn" >Mua sản phẩm</button>                             
+                            </div>    
+                        </div>
+                    </div>
+                    <div class="product ">
+                        <img class="pm-img" src="images/pm3.JPG" />
+                        <div class="p_info">
+                            <p class="name" id="name"> Office Home &amp; Student 2021 For PC/Mac Vĩnh Viễn All Languages</p>  
+                            <b class="sale-price"id="sale-price">2.190.000</b>đ<br>
+                            <div class="cauhinh" style="margin-top:10px;font-weight: 50;">
+                                <button type="submit" class="btn" >Mua sản phẩm</button>                             
+                            </div>    
+                        </div>
+                    </div>
+                    <div class="product ">
+                        <img class="pm-img" src="images/pm4.JPG" />
+                        <div class="p_info">
+                            <p class="name"id="name"> Windows 10 Home 32-bit/64-bit All Languages (KW9-00265)</p>  
+                            <b class="sale-price"id="sale-price">3.290.000</b>đ<br>
+                            <div class="cauhinh" style="margin-top:10px;font-weight: 50;">
+                                <button type="submit" class="btn" >Mua sản phẩm</button>                             
+                            </div>    
+                        </div>
+                    </div>
+                    <div class="product last-product">
+                        <img class="pm-img"  src="images/pm5.JPG" />
+                        <div class="p_info">
+                            <p class="name"id="name"> Windows 10 Pro 32-bit/64-bit All Languages (FQC-09131)</p>  
+                            <b class="sale-price"id="sale-price">4.990.000</b>đ<br>
+                            <div class="cauhinh" style="margin-top:10px;font-weight: 50;">
+                                <button type="submit" class="btn" >Mua sản phẩm</button>                             
+                            </div>    
+                        </div>
+                    </div>
+          
+                </div>
+                <div class="more">XEM TẤT CẢ LAPTOP CAO CẤP <i class="fa-solid fa-caret-right " style="margin-left:5px"></i></div>
+            </div>
+            
+        </div>
+        <div style="border-top: solid 1px #ddd;margin-top:20px"></div>
+        <div id="footer" class="grid">
+           <div id="footer-1">
+                <ul>
+                    <li>Lịch sử mua hàng</li>
+                    <li>Cộng tác bán hàng cùng Anphat</li>
+                    <li>Tìm hiểu về mua trả góp</li>
+                    <li>Chính sách bảo hành</li>
+                    <li>Xem thêm</li>
+                </ul>
+            </div>
+            <div id="footerdm">
+                <ul>
+                    <li>Giới thiệu công ty</li>
+                    <li>Tuyển dụng</li>
+                    <li>Gửi góp ý ,khiếu nại</li>
+                    <li>Tìm của hàng</li>
+                    <li>Xem bản mobile</li>
+                </ul>
+            </div>
+            <div id="footerht">
+                <ul>
+                    <li><b>Tổng đài hỗ trợ</b>(Miễn phí gọi)</li>
+                    <li>Gọi mua : <b>1800 1060</b>(7:30-22:00)</li>
+                    <li>Kỹ thuật : <b>1800 1073</b>(7:30-22:00)</li>
+                    <li>Khiếu nại : <b>1800 1062</b>(8:00-21:30)</li>
+                    <li>Bảo hành : <b>1800 1064</b>(8:00-21:00)</li>
+                </ul>
+            </div>
+            <div id="footer-right">
+                <ul>
+                    <li><b>Trung tâm bảo hành</b></li>
+                    <li>Tầng 2,Yên Lãng,Đống Đa, Hà Nội</li>
+                    <li>Điện thoại : 0364141625</li>
+                    <li>Email : baohanh@ankhang.com</li>
+                    <li><a href="#">[ Bản đồ đường đi ]</a></li>
+                </ul>
+            </div>
+        </div>        
+        <div id="top-line " style="background-color: #001c99; height: 40px ">
+            <div style="width: 100%;background-color:#3d0099; margin: 0px auto; color: #fff; line-height: 40px; text-align: center;">
+                <span><b>© Bản quyền thuộc về Pham Van Cua | Powered by BM</b></span>
+            </div>
+        </div>
+        <script src="js/F8.js"></script>
+        <script src="js/bars.js"></script>
+        <script src="js/tab.js"></script>
+        <script src="js/slideshow.js"></script>
+        <script src="js/cart.js"></script>
+
+    </body>
+</html>

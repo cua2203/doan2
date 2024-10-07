@@ -1,0 +1,184 @@
+body{
+    background-color: white;
+
+}
+* {
+    box-sizing: border-box;
+  }
+.content-top{
+    display: flex;
+    margin-bottom: 30px;
+}
+.content-top-left{
+    width: 700px;
+    min-height: 500px;
+    float: left;
+}
+
+#title{
+    height: 50px;
+    display: flex;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+.slideshow2{
+    position: relative;
+    width: 100%;
+    height: 400px;
+}
+.mySlides {
+    display: none;
+}
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+    cursor: pointer;
+  }
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 40%;
+    width: auto;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+}
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover,
+  .next:hover {
+    background-color: rgba(167, 167, 167, 0.821);
+  }
+  .numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Six columns side by side */
+  .column {
+    float: left;
+    width: 16.66%;
+  }
+  
+  /* Add a transparency effect for thumnbail images */
+  .demo {
+    opacity: 0.6;
+  }
+  
+  .active,
+  .demo:hover {
+    opacity: 1;
+}
+
+
+.content-top-right{
+    flex: 1;
+    margin-left: 20px;
+    min-height: 500px;
+}
+.content-top-right p{
+    font-size: 16px;
+    color:#555
+}
+.content-top-right li{
+    margin-bottom: 15px;
+    color: #555;
+}
+.gift{
+    height: 58px;
+    width: 170px;
+    border: 1px solid #666;
+    display: flex;
+    padding: 3 5;
+    line-height: 20px;
+    border-radius: 3px;
+    margin-right: 5px;
+    margin-top: 10px;
+}
+.gift h{
+    font-size: 12px;
+    color: #333;
+}
+.gift img{
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+#buy button{
+    height: 40px;
+    width:  48%;
+    background-color: rgb(14, 66, 106);
+    color: white;
+    font-size: 16px;
+    opacity: 0.7;
+}
+#buy button:hover{
+    opacity: 1;
+}
+
+#content-mid{
+    display: flex;
+    width: 100%;
+    min-height: 600px;
+}
+.content-mid-left{
+    width: 700px;
+    min-height: 600px;
+    flex-direction: row;
+}
+.content-mid-left h4{
+    color: #555;
+    font-size: 18px;
+}
+.content-mid-left p{
+    color: #555;
+    font-size: 16px;
+    font-weight: 600;
+}
+.content-mid-right{
+    min-height: 600px;
+    flex: 1;
+    margin-left: 20px;
+}
+.content-mid-right h3{
+    color: #555;
+}
+
+table{
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    font-size: 14px;
+}
+  
+td, th {
+    text-align: left;
+    padding: 8px;
+}
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+td:nth-child(even) {
+    width: 70%;
+
+}
